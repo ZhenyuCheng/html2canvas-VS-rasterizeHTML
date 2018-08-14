@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>rasterizeHTML.js example</title>
+    <script type="text/javascript" src="../node_modules/rasterizehtml/dist/rasterizeHTML.allinone.js"></script>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="200"></canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById("canvas");
+        rasterizeHTML.drawHTML(`
+            <div style="font-size: 20px;">
+                Some 
+                <span style="color: green">HTML</span>
+                with an image 
+                <img src="https://haitao.nos.netease.com/a1001d89-5dca-4fa9-bbb6-a1e5a2af9621_90_90.png">
+            </div> 
+            <style type="text/css">
+                body {
+                    color: red;
+                }
+            </style>`,
+            canvas);
+    </script>
+</body>
+</html>
